@@ -193,6 +193,7 @@ public class SignupOne extends JFrame implements ActionListener{
         setSize(900, 900);
         setLocation(350, 0);
         setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     @Override

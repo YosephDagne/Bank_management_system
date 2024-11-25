@@ -169,6 +169,7 @@ public class SignupTwo extends JFrame implements ActionListener {
         setSize(850, 800);
         setLocation(350, 0);
         setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
     public void actionPerformed(ActionEvent ae) {
         String Religion = (String) religion.getSelectedItem();

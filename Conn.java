@@ -1,18 +1,22 @@
-//these are the important libraries
 import java.sql.*;
 
-public class Conn{
+public class Conn {
     Connection connection;
     static Statement statement;
-    //the constructor Conn
-    public Conn(){
-        //the try catch block
-        try{
+
+    // The constructor Conn
+    public Conn() {
+        try {
+            // Load the MySQL driver
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql:///bankManagementSystem","root","12345");
+
+            // Specify the port number and use the correct username and password
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bankingsystem", "root", "12345");
+
+            // Create statement object
             statement = connection.createStatement();
-        }catch(Exception e){
-            System.out.println();
+        } catch (Exception e) {
+            e.printStackTrace();  // Print the exception to the console
         }
     }
 }

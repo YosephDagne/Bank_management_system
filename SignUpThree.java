@@ -157,6 +157,7 @@ public class SignUpThree extends JFrame implements ActionListener {
         setSize(850,820);
         setLocation(350,0);
         setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
     // ActionListener method implementation
     public void actionPerformed(ActionEvent ae){

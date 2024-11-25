@@ -63,6 +63,7 @@ public class PinChange extends JFrame implements ActionListener {
         setLocation(300, 0);
         setUndecorated(true);
         setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public void actionPerformed(ActionEvent ae) {

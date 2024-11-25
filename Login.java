@@ -77,6 +77,7 @@ public class Login extends JFrame implements ActionListener {
         setLocation(350, 0);
         setVisible(true);
         label.setBounds(70, 10, 100, 100);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
 

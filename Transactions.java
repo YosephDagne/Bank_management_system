@@ -90,6 +90,7 @@ public class Transactions extends JFrame implements ActionListener{
         setLocation(350, 0);
         setUndecorated(true);
         setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     // define a method that handles the action events of the buttons
