@@ -16,7 +16,7 @@ public class Login extends JFrame implements ActionListener {
         setLayout(null);
 
 // Creating and scaling the logo image
-        ImageIcon image1 = new ImageIcon(ClassLoader.getSystemResource("icons/logo.jpg"));
+        ImageIcon image1 = new ImageIcon(ClassLoader.getSystemResource("logo.jpg"));
         Image image2 = image1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
         ImageIcon image3 = new ImageIcon(image2);
         JLabel label = new JLabel(image3);

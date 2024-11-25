@@ -10,14 +10,14 @@ public class Transactions extends JFrame implements ActionListener{
     String pinNumber;
     Transactions(String pinNumber) {
 
-        // assign the pin number to the instance variable
+        // assign the pinNumber to the instance variable
         this.pinNumber = pinNumber;
 
         // Set the layout manager to null
         setLayout(null);
 
         // Load an image from the icons folder and then scale it to fit the frame
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("atm.jpg"));
         Image i2 = i1.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
 

@@ -1,7 +1,5 @@
 // Import necessary packages
-
 import com.toedter.calendar.JDateChooser;
-
 import javax.swing.*;
 import javax.swing.text.AbstractDocument;
 import java.awt.*;

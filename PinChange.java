@@ -13,7 +13,7 @@ public class PinChange extends JFrame implements ActionListener {
 
         setLayout(null);
 
-        ImageIcon imageIcon = new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
+        ImageIcon imageIcon = new ImageIcon(ClassLoader.getSystemResource("atm.jpg"));
         Image image2 = imageIcon.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
         ImageIcon image3 = new ImageIcon(image2);
         JLabel image = new JLabel(image3);
