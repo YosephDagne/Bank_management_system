@@ -11,13 +11,13 @@ public class FastCash extends JFrame implements ActionListener {
 
     JLabel label1, label3;
     JButton button1, button2, button3, button4, button5, button6, button7;
-    String pinNumber;
+    String pin;
 
 // Constructor for the FastCash class that takes a pin as a parameter
 
     FastCash(String pin) {
 
-        this.pinNumber = pin;
+        this.pin = pin;
         setLayout(null);
 
 // Creating an ImageIcon object with the image file "atm.jpg"
@@ -91,7 +91,7 @@ public class FastCash extends JFrame implements ActionListener {
 
 // Getting the text of the clicked button
             String amount = ((JButton)ae.getSource()).getText();
-            ResultSet resultSets = connection.statement.executeQuery("select * from bank where pinNumber = '"+pinNumber+"'");
+            ResultSet resultSets = connection.statement.executeQuery("select * from bank where pin = '"+pin+"'");
             int balance = 0;
 
             while (resultSets.next()) {
@@ -109,15 +109,15 @@ public class FastCash extends JFrame implements ActionListener {
             }
             if (ae.getSource() == button7) {
                 this.setVisible(false);
-                new Transactions(pinNumber).setVisible(true);
+                new Transactions(pin).setVisible(true);
             }else{
                 Conn connection1 = new Conn();
                 Date date = new Date();
-                connection1.statement.executeUpdate("insert into bank values('"+pinNumber+"', '"+date+"', 'Withdrawal', '"+amount+"')");
+                connection1.statement.executeUpdate("insert into bank values('"+pin+"', '"+date+"', 'Withdrawal', '"+amount+"')");
                 JOptionPane.showMessageDialog(null, amount+" Birr Debited Successfully");
 
                 setVisible(false);
-                new Transactions(pinNumber).setVisible(true);
+                new Transactions(pin).setVisible(true);
 
                 resultSets.close();
             }

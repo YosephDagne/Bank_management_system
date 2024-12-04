@@ -9,12 +9,12 @@ public class BalanceEnquiry extends JFrame implements ActionListener {
 
     // define back and pinNumber as instance variable
     JButton back;
-    String pinNumber;
+    String pin;
     // Define a constructor that takes a pinNumber as parameter
     BalanceEnquiry(String pinNumber){
 
         // assign the pinNumber to the instance variable
-        this.pinNumber = pinNumber;
+        this.pin = pinNumber;
 
         // set the layout manager to null
         setLayout(null);
@@ -48,7 +48,7 @@ public class BalanceEnquiry extends JFrame implements ActionListener {
         // use a try-catch block to handle any SQL exceptions
         try{
             // execute a query to get the records from the bank table where the pinNumber matches
-            ResultSet rs = connection.statement.executeQuery("select *from bank where pinNumber = '"+ pinNumber+"'");
+            ResultSet rs = connection.statement.executeQuery("select *from bank where pin = '"+ pin+"'");
 
             // loop through the result set and update the balance according to the type and amount of the transactions
             while(rs.next()){
@@ -81,7 +81,7 @@ public class BalanceEnquiry extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent ae){
         setVisible(false);
-        new Transactions(pinNumber).setVisible(true);
+        new Transactions(pin).setVisible(true);
     }
     public static void main(String[] args){
         new BalanceEnquiry("");
